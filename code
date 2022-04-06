@@ -1,0 +1,33 @@
+#include <Servo.h>
+
+Servo servoAxeZ
+Servo servoLongueur
+Servo servoHauteur
+Servo servoPince
+
+void setup() {
+  // put your setup code here, to run once:
+  servoAxeZ.attach(9);
+  servoLongueur.attach(10);
+  servoHauteur.attach(11);
+  servoPince.attach(12);
+
+  servoAxeZ.write(posAxeZIni);
+  servoHauteur.write(posHauteurIni);
+  servoLongueur.write(posLongueurIni);
+  servoPince.write(posPinceIni);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  servoAxeZ.write(posAxeZConve);
+  servoHauteur.write(posHauteurConve);
+  servoLongueur.write(posLongueurConve);
+  servoPince.write(posPinceConve);
+
+  servoAxeZ.write(posAxeZIni);
+  servoHauteur.write(posHauteurIni);
+  servoLongueur.write(posLongueurIni);
+  servoPince.write(posPinceIni);
+  
+}
